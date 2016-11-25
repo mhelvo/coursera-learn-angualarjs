@@ -1,0 +1,17 @@
+<div class="container">
+<div ng-if="infoCtrl.user.firstname">
+<div><span>first name:<span>{{infoCtrl.user.firstname}}</div>
+<div><span>last name:<span>{{infoCtrl.user.lastname}}</div>
+<div><span>email:<span>{{infoCtrl.user.email}}</div>
+<div><span>phone:<span>{{infoCtrl.user.phone}}</div>
+<div>
+  <div>{{infoCtrl.user.favoriteDishItem.name}}</div>
+  <img class="img-responsive" width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.user.favoriteDishItem.short_name}}.jpg" alt="{{infoCtrl.user.favoriteDishItem.name}}">
+  <div>{{infoCtrl.user.favoriteDishItem.description}}</div>
+</div>
+</div>
+
+<div ng-if="!infoCtrl.user.firstname">
+   Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+</div>
+</div>
